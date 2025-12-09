@@ -24,33 +24,104 @@ run_test() {
     fi
 }
 
-# Explicit commands, each on its own line:
-run_test iperf3 -c 37.19.206.20 -R -u
-run_test iperf3 -c ash.speedtest.clouvider.net -p 5200-5209 -R -6 -u
-run_test iperf3 -c 185.152.66.67 -R -u
-run_test iperf3 -c atl.speedtest.clouvider.net -p 5200-5209 -R -6 -u
-run_test iperf3 -c 109.61.86.65 -R -u
-run_test iperf3 -c speedtest15.suddenlink.net -R -u
-run_test iperf3 -c 185.93.1.65 -R -u
-run_test iperf3 -c speedtest.chi11.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c 89.187.164.1 -R
-run_test iperf3 -c dal.speedtest.clouvider.net -p 5200-5209 -R -6 -u
-run_test iperf3 -c speedtest.dal13.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c 37.19.216.1 -R -u
-run_test iperf3 -c 185.152.67.2 -R -u
-run_test iperf3 -c la.speedtest.clouvider.net -p 5200-5209 -R -6 -u
-run_test iperf3 -c speedtest.lax12.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c 195.181.162.195 -R -u
-run_test iperf3 -c speedtest.mia11.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c 185.59.223.8 -R -u
-run_test iperf3 -c spd-uswb.hostkey.com -p 5205 -R
-run_test iperf3 -c nyc.speedtest.clouvider.net -p 5201-5209 -R -6 -u
-run_test iperf3 -c speedtest.nyc1.us.leaseweb.net -p 5201-5210 -R -6 -u
-run_test iperf3 -c speedtest.phx1.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c speedtest.sfo12.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c 84.17.41.11 -R
-run_test iperf3 -c speedtest.sea11.us.leaseweb.net -p 5201-5210 -R -6
-run_test iperf3 -c speedtest.wdc2.us.leaseweb.net -p 5201-5210 -R -6
+# Ashburn DATAPACKET
+run_test iperf3 -c 37.19.206.20 -p 5201
+run_test iperf3 -c 37.19.206.20 -p 5201 -R -P 5 -t 10
+
+# Ashburn Clouvider
+run_test iperf3 -c ash.speedtest.clouvider.net -p 5200
+run_test iperf3 -c ash.speedtest.clouvider.net -p 5200 -R -P 5 -t 10
+
+# Atlanta DATAPACKET
+run_test iperf3 -c 185.152.66.67 -p 5201
+run_test iperf3 -c 185.152.66.67 -p 5201 -R -P 5 -t 10
+
+# Atlanta Clouvider
+run_test iperf3 -c atl.speedtest.clouvider.net -p 5200
+run_test iperf3 -c atl.speedtest.clouvider.net -p 5200 -R -P 5 -t 10
+
+# Boston DATAPACKET
+run_test iperf3 -c 109.61.86.65 -p 5201
+run_test iperf3 -c 109.61.86.65 -p 5201 -R -P 5 -t 10
+
+# Charleston Optimum
+run_test iperf3 -c speedtest15.suddenlink.net -p 5201
+run_test iperf3 -c speedtest15.suddenlink.net -p 5201 -R -P 5 -t 10
+
+# Chicago DATAPACKET
+run_test iperf3 -c 185.93.1.65 -p 5201
+run_test iperf3 -c 185.93.1.65 -p 5201 -R -P 5 -t 10
+
+# Chicago LeaseWeb
+run_test iperf3 -c speedtest.chi11.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.chi11.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# Dallas DATAPACKET
+run_test iperf3 -c 89.187.164.1 -p 5201
+run_test iperf3 -c 89.187.164.1 -p 5201 -R -P 5 -t 10
+
+# Dallas Clouvider
+run_test iperf3 -c dal.speedtest.clouvider.net -p 5200
+run_test iperf3 -c dal.speedtest.clouvider.net -p 5200 -R -P 5 -t 10
+
+# Dallas LeaseWeb
+run_test iperf3 -c speedtest.dal13.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.dal13.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# Houston DATAPACKET
+run_test iperf3 -c 37.19.216.1 -p 5201
+run_test iperf3 -c 37.19.216.1 -p 5201 -R -P 5 -t 10
+
+# Los Angeles DATAPACKET
+run_test iperf3 -c 185.152.67.2 -p 5201
+run_test iperf3 -c 185.152.67.2 -p 5201 -R -P 5 -t 10
+
+# Los Angeles Clouvider
+run_test iperf3 -c la.speedtest.clouvider.net -p 5200
+run_test iperf3 -c la.speedtest.clouvider.net -p 5200 -R -P 5 -t 10
+
+# Los Angeles LeaseWeb
+run_test iperf3 -c speedtest.lax12.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.lax12.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# Miami DATAPACKET
+run_test iperf3 -c 195.181.162.195 -p 5201
+run_test iperf3 -c 195.181.162.195 -p 5201 -R -P 5 -t 10
+
+# Miami LeaseWeb
+run_test iperf3 -c speedtest.mia11.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.mia11.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# New York DATAPACKET
+run_test iperf3 -c 185.59.223.8 -p 5201
+run_test iperf3 -c 185.59.223.8 -p 5201 -R -P 5 -t 10
+
+# New York HOSTKEY
+run_test iperf3 -c spd-uswb.hostkey.com -p 5205
+run_test iperf3 -c spd-uswb.hostkey.com -p 5205 -R -P 5 -t 10
+
+# New York Clouvider
+run_test iperf3 -c nyc.speedtest.clouvider.net -p 5201
+run_test iperf3 -c nyc.speedtest.clouvider.net -p 5201 -R -P 5 -t 10
+
+# New York LeaseWeb
+run_test iperf3 -c speedtest.nyc1.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.nyc1.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# Phoenix LeaseWeb
+run_test iperf3 -c speedtest.phx1.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.phx1.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# San Francisco LeaseWeb
+run_test iperf3 -c speedtest.sfo12.us.leaseweb.net -p 5201
+run_test iperf3 -c speedtest.sfo12.us.leaseweb.net -p 5201 -R -P 5 -t 10
+
+# Seattle
+iperf3 -c 84.17.41.11
+iperf3 -c speedtest.sea11.us.leaseweb.net -p 5201-5210
+
+# Washington
+iperf3 -c speedtest.wdc2.us.leaseweb.net -p 5201-5210
 
 echo "====================================="
 echo "Fastest server: $FASTEST_SERVER at $FASTEST_SPEED Mbits/sec"
